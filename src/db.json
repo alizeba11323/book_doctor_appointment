@@ -1,0 +1,85 @@
+{
+  "doctors": [
+    {
+      "id": "1",
+      "name": "Dr Atish Ranjan",
+      "speciality": "General Physician",
+      "total_experiance": 15,
+      "city": "Avignon",
+      "date_of_birth": "1995-11-03",
+      "email": "dt@gmail.com",
+      "mobile": "180211141084",
+      "rating": 3.5,
+      "comments": {
+        "rating": "3",
+        "comment": "Nice"
+      }
+    },
+    {
+      "id": "2",
+      "name": " Dr Vikrant Mittal",
+      "speciality": "Orthopedics",
+      "total_experiance": 21,
+      "city": "Avignon",
+      "date_of_birth": "1995-11-03",
+      "email": "dt@gmail.com",
+      "mobile": "180211141084",
+      "rating": 5
+    },
+    {
+      "id": "3",
+      "name": " Dr Navin Sukhla",
+      "speciality": "Pediatrics",
+      "total_experiance": 19,
+      "city": "Avignon",
+      "date_of_birth": "1995-11-03",
+      "email": "dt@gmail.com",
+      "mobile": "180211141084",
+      "rating": 4.5
+    },
+    {
+      "id": "4",
+      "name": "Dr Anil Gupta",
+      "speciality": "General Physician",
+      "total_experiance": 10,
+      "city": "Avignon",
+      "date_of_birth": "1995-11-03",
+      "email": "dt@gmail.com",
+      "mobile": "180211141084",
+      "rating": 5
+    },
+    {
+      "id": "5",
+      "name": "Dr Puja Kumari",
+      "speciality": "Gyneacology",
+      "total_experiance": 5,
+      "city": "Avignon",
+      "date_of_birth": "1995-11-03",
+      "email": "dt@gmail.com",
+      "mobile": "180211141084",
+      "rating": 4
+    }
+  ],
+  "users": [
+    {
+      "id": "9272",
+      "firstname": "zeba",
+      "lastname": "ali",
+      "email": "abc@gmail.com",
+      "password": "password",
+      "mobile": "9876355310"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "1d52",
+      "date": "2024-03-21T05:36:15.000Z",
+      "time_slot": "06PM-07PM",
+      "priorMedicalHistory": "NA",
+      "symptoms": "Cold",
+      "name": "Dr Atish Ranjan",
+      "user_id": "9272",
+      "doctor_id": "1"
+    }
+  ]
+}

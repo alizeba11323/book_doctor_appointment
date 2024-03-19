@@ -1,0 +1,23 @@
+.navbar-header {
+  background-color: purple;
+  color: white;
+  height: 70px;
+  width: 98.3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 11px;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.app-logo > span.logo > img {
+  width: 35px;
+  height: 35px;
+}
