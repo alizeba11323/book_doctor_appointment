@@ -9,23 +9,30 @@ import {
   TextField,
 } from "@mui/material";
 import React, { useState } from "react";
-import dayjs from "dayjs";
 import Modal from "../../components/Modal";
 import { BookNewAppointment, CheckAvailableSlot } from "../../util/fetch";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFnsV3";
 import { useAlertMessage } from "../../util/AuthProvider";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { format, parse } from "date-fns";
 function BookAppointment({ modalIsOpen, setIsOpen, setOpen, selectedDoctor }) {
+  const dateFormat = "yyyy-MM-dd";
+  const today = format(new Date(), dateFormat);
+  const referenceDate = new Date(1970, 0, 1, 0, 0, 0);
   const [data, setData] = useState({
-    date: dayjs(new Date()),
+    date: today,
     time_slot: "none",
     priorMedicalHistory: "",
     symptoms: "",
   });
+  const datefnsDate = parse(data.date, dateFormat, referenceDate);
   const [errors, setErrors] = useState({});
   const { setMessageObj } = useAlertMessage();
-
+  function onChangeCallback(dateObject) {
+    let formattedDateString = format(dateObject, dateFormat);
+    setData((prev) => ({ ...prev, date: formattedDateString }));
+  }
   const handleChange = (event) => {
     if (event.target.name === "date")
       setErrors((prev) => ({ ...prev, date: "" }));
@@ -74,7 +81,7 @@ function BookAppointment({ modalIsOpen, setIsOpen, setOpen, selectedDoctor }) {
               content: "Appointment Booked Successfully",
             }));
             setData({
-              date: "",
+              date: today,
               time_slot: "none",
               priorMedicalHistory: "",
               symptoms: "",
@@ -103,16 +110,14 @@ function BookAppointment({ modalIsOpen, setIsOpen, setOpen, selectedDoctor }) {
             required
           />
           <br />
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <LocalizationProvider dateAdapter={AdapterDateFns}>
             <DemoContainer components={["DatePicker"]}>
               <DatePicker
                 sx={{ height: "50px" }}
                 slotProps={{ textField: { variant: "standard" } }}
-                minDate={dayjs(new Date().toISOString().split("T")[0])}
-                value={data.date}
-                onChange={(newVal) =>
-                  setData((prev) => ({ ...prev, date: newVal }))
-                }
+                minDate={today}
+                value={datefnsDate}
+                onChange={onChangeCallback}
               />
             </DemoContainer>
           </LocalizationProvider>

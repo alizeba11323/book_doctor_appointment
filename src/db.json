@@ -72,11 +72,61 @@
   ],
   "appointments": [
     {
-      "id": "1d52",
-      "date": "2024-03-21T05:36:15.000Z",
+      "id": "43aa",
+      "date": "2024-03-21",
+      "time_slot": "06PM-07PM",
+      "priorMedicalHistory": "",
+      "symptoms": "",
+      "name": "Dr Atish Ranjan",
+      "user_id": "9272",
+      "doctor_id": "1"
+    },
+    {
+      "id": "c7eb",
+      "date": "2024-03-19T18:30:00.000Z",
       "time_slot": "06PM-07PM",
       "priorMedicalHistory": "NA",
-      "symptoms": "Cold",
+      "symptoms": "",
+      "name": "Dr Atish Ranjan",
+      "user_id": "9272",
+      "doctor_id": "1"
+    },
+    {
+      "id": "cb55",
+      "date": "2024-03-19T18:30:00.000Z",
+      "time_slot": "06PM-07PM",
+      "priorMedicalHistory": "",
+      "symptoms": "",
+      "name": "Dr Atish Ranjan",
+      "user_id": "9272",
+      "doctor_id": "1"
+    },
+    {
+      "id": "98ad",
+      "date": "2024-03-20",
+      "time_slot": "04PM-05PM",
+      "priorMedicalHistory": "",
+      "symptoms": "",
+      "name": "Dr Atish Ranjan",
+      "user_id": "9272",
+      "doctor_id": "1"
+    },
+    {
+      "id": "02fe",
+      "date": "2024-03-20",
+      "time_slot": "05PM-06PM",
+      "priorMedicalHistory": "",
+      "symptoms": "",
+      "name": "Dr Atish Ranjan",
+      "user_id": "9272",
+      "doctor_id": "1"
+    },
+    {
+      "id": "4b3c",
+      "date": "2024-03-20",
+      "time_slot": "07PM-08PM",
+      "priorMedicalHistory": "",
+      "symptoms": "",
       "name": "Dr Atish Ranjan",
       "user_id": "9272",
       "doctor_id": "1"

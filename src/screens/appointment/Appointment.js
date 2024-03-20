@@ -39,7 +39,7 @@ function Appointment({ setSelectedDoctor }) {
               sx={{ mt: 1.5, fontweight: "bold" }}
               color="text.primary"
             >
-              Date: {new Date(app.date).toISOString().split("T")[0]}
+              Date: {app.date}
             </Typography>
             <Typography
               sx={{

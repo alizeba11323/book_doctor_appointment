@@ -86,7 +86,7 @@ function Home() {
             id="alert-dialog-description"
             sx={{ color: "white" }}
           >
-            {"Enter slot is already booked or not avialable"}
+            {"Either the slot is already booked or not available"}
           </DialogContentText>
         </DialogContent>
 
@@ -94,7 +94,7 @@ function Home() {
           sx={{ backgroundColor: "rgba(0, 0, 0, 0.8) ", color: "white" }}
         >
           <Button onClick={handleClose} autoFocus variant="contained">
-            click
+            ok
           </Button>
         </DialogActions>
       </Dialog>
